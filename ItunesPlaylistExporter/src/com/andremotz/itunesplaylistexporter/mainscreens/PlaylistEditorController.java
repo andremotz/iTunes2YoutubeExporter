@@ -5,7 +5,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.andremotz.itunesplaylistexporter.datahandling.Datahandler;
 import com.andremotz.itunesplaylistexporter.datahandling.TableTracksItem;
@@ -34,7 +35,11 @@ import javafx.util.Callback;
 
 public class PlaylistEditorController implements Initializable {
 	
-	static Logger log = Logger.getLogger(PlaylistEditorController.class.getName());
+	
+	Logger log = LogManager
+			.getLogger(PlaylistEditorController.class.getName());
+	
+	
 
 	@FXML
 	public TableView<TableTracksItem> tableTracks;

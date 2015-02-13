@@ -1,8 +1,8 @@
 package com.andremotz.itunesplaylistexporter.mainscreens;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-import com.andremotz.itunesplaylistexporter.annotations.ClassPreamble;
 import com.andremotz.itunesplaylistexporter.datahandling.GlobalFunctions;
 
 import javafx.application.Application;
@@ -13,10 +13,10 @@ import javafx.stage.Stage;
 
 public class MainClass extends Application {
 
-	static Logger log = Logger.getLogger(MainClass.class.getName());
+	Logger log = LogManager
+			.getLogger(MainClass.class.getName());
 
 	@Override
-	@ClassPreamble(author = "Andre Motz", date = "11/02/2013", currentRevision = 1, lastModified = "11/12/2013", lastModifiedBy = "Andr?? Motz", notes = "")
 	public void start(Stage stage) throws Exception {
 		log.trace(GlobalFunctions.getMethodName(0));
 		Parent root = FXMLLoader.load(getClass().getResource(

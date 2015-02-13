@@ -6,10 +6,12 @@ import java.net.URL;
 import java.util.Properties;
 import java.util.ResourceBundle;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.andremotz.itunesplaylistexporter.datahandling.Datahandler;
 import com.andremotz.itunesplaylistexporter.datahandling.GlobalFunctions;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -25,7 +27,8 @@ import javafx.stage.Stage;
 public class LibraryChooserController implements Initializable {
 
 	File iTunesLibrary;
-	static Logger log = Logger.getLogger(LibraryChooserController.class.getName());
+	Logger log = LogManager
+			.getLogger(LibraryChooserController.class.getName());
 	Properties generalProperties = new Properties();
 
 	@FXML

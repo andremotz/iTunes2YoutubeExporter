@@ -2,10 +2,12 @@ package com.andremotz.itunesplaylistexporter.mainscreens;
 
 import java.util.ArrayList;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.andremotz.itunesplaylistexporter.datahandling.Datahandler;
 import com.andremotz.itunesplaylistexporter.datahandling.TableTracksItem;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -14,8 +16,8 @@ import javafx.stage.Stage;
 
 public class MainClassTestPlaylistEditor extends Application {
 
-	static Logger log = Logger.getLogger(MainClassTestPlaylistEditor.class
-			.getName());
+	Logger log = LogManager.getLogger(MainClassTestPlaylistEditor.class
+	        .getName());
 
 	@Override
 	public void start(Stage stage) throws Exception {

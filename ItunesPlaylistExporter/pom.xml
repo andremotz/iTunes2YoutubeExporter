@@ -72,6 +72,12 @@
 			<artifactId>google-oauth-client-jetty</artifactId>
 			<version>${project.oauth.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.1</version>
+		</dependency>
+
 	</dependencies>
 
 

@@ -6,8 +6,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 
-import org.apache.log4j.Logger;
-
 import com.andremotz.itunesplaylistexporter.datahandling.Datahandler;
 import com.andremotz.itunesplaylistexporter.datahandling.GlobalFunctions;
 import com.andremotz.itunesplaylistexporter.datahandling.ItunesLibraryDataParser;
@@ -30,12 +28,17 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class PlaylistChooserController implements Initializable {
 
 	private LibraryObject iTunesLibraryObject;
 	private Playlist[] iTunesPlayLists;
 	private HashMap<String, Playlist> iTunesPlayListsMap = new HashMap<String, Playlist>();
-	static Logger log = Logger.getLogger(PlaylistChooserController.class.getName());
+	
+	Logger log = LogManager
+			.getLogger(PlaylistChooserController.class.getName());
 
 	@FXML
 	private Label lblHeadline;

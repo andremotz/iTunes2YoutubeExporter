@@ -34,7 +34,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Youtube Blackbox that handles youtube-relevant stuff
@@ -43,8 +44,9 @@ import org.apache.log4j.Logger;
  */
 public class YoutubeBlackbox {
 
-	static Logger log = Logger.getLogger(YoutubeBlackbox.class.getName());
-
+	static Logger log = LogManager
+			.getLogger(YoutubeBlackbox.class.getName());
+	
 	/** Global instance of Youtube object to make all API requests. */
 	private static YouTube youtube;
 

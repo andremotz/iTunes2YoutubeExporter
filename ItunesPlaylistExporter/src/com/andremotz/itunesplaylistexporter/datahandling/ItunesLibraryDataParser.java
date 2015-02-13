@@ -3,8 +3,6 @@ package com.andremotz.itunesplaylistexporter.datahandling;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import org.apache.log4j.Logger;
-
 import com.gps.itunes.lib.exceptions.NoChildrenException;
 import com.gps.itunes.lib.items.playlists.Playlist;
 import com.gps.itunes.lib.items.playlists.PlaylistItem;
@@ -13,14 +11,18 @@ import com.gps.itunes.lib.items.tracks.Track;
 import com.gps.itunes.lib.tasks.TracksRetriever;
 import com.gps.itunes.lib.types.LibraryObject;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+
 public class ItunesLibraryDataParser {
 	
 	public ItunesLibraryDataParser() {
 		
 	}
 
-	static Logger log = Logger.getLogger(ItunesLibraryDataParser.class
-			.getName());
+	Logger log = LogManager
+			.getLogger(ItunesLibraryDataParser.class.getName());
 			
 	/*
 	 * Return all data for relevant Tracks like Artis, Track id etc
